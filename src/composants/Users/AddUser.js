@@ -9,7 +9,7 @@ const AddUser = (props) => {
         event.preventDefault();
         if(username.trim().length === 0 || age.trim().length === 0) return;
         if(+age < 0) return;
-        console.log(username, age);
+        props.onAddUser(username,age);
         setusername('');
         setage('');
     }
